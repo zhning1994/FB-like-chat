@@ -10,6 +10,12 @@ const app = express();
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 app.use(cors());
+app.use(helmet());
+app.use(morgan("common"));
+
+app.get("/", (req, res) => {
+    res.send("Welcome to Momos")
+})
 
 mongoose.connect(process.env.CONNECTION_URL).then(() => {
     console.log("DB Connection Successful")
