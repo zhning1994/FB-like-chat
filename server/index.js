@@ -15,7 +15,7 @@ app.use(cors());
 app.use(helmet());
 app.use(morgan("common"));
 
-app.use("/api/user", usersRoutes);
+app.use("/api/users", usersRoutes);
 app.use("/api/auth", authRoutes);
 
 mongoose.connect(process.env.CONNECTION_URL).then(() => {
