@@ -6,6 +6,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 const usersRoutes = require("./routes/usersRoutes");
 const authRoutes = require("./routes/authRoutes");
+const postsRoutes = require("./routes/postsRoutes");
 
 dotenv.config();
 const app = express();
@@ -17,6 +18,8 @@ app.use(morgan("common"));
 
 app.use("/api/users", usersRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/posts", postsRoutes);
+
 
 mongoose.connect(process.env.CONNECTION_URL).then(() => {
     console.log("DB Connection Successful")
