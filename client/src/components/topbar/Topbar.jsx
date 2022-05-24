@@ -5,7 +5,7 @@ function Topbar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <img src="/assets/logo.png" alt="logo" className="" />
+        <img src="/assets/logo.png" alt="logo" />
         <span className="logo">FofocaChat</span>
       </div>
       <div className="topbarCenter">
@@ -20,20 +20,20 @@ function Topbar() {
       </div>
       <div className="topbarRight">
         <div className="topbarLink">
-          <span className="topbarLink">Homepage</span>
+          <span className="topbarLink">Home</span>
           <span className="topbarLink">Timeline</span>
         </div>
         <div className="topbarIcons">
           <div className="topbarIconItem">
-            <Person />
+            <Person className="iconDetail" />
             <span className="topbarIconBadge">1</span>
           </div>
           <div className="topbarIconItem">
-            <Chat />
+            <Chat className="iconDetail" />
             <span className="topbarIconBadge">2</span>
           </div>
           <div className="topbarIconItem">
-            <Notifications />
+            <Notifications className="iconDetail" />
             <span className="topbarIconBadge">1</span>
           </div>
         </div>
