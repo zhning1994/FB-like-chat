@@ -10,15 +10,21 @@
 }
 
 .topbarLeft {
-  display: flex;
   align-items: center;
   margin-left: 2rem;
   flex: 3;
 }
 
+.linkPages {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .topbarLeft img {
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
 
 .logo {
