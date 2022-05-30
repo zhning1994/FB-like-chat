@@ -30,23 +30,23 @@ function Profile() {
             <div className="profileCover">
               <img
                 className="profileCoverImg"
-                src="/assets/post/3.jpeg"
+                src={user.coverPicture || PF + "person/noCover.png"}
                 alt="coverPic"
               />
               <img
                 className="profileUserImg"
-                src="/assets/person/7.jpeg"
+                src={user.profilePicture || PF + "person/noAvatar.png"}
                 alt="profilePic"
               />
             </div>
             <div className="profileInfo">
-              <h4 className="profileInfoName">Safak Kocaoglu</h4>
-              <span className="profileInfoDesc">Hello my friends!</span>
+              <h4 className="profileInfoName">{user.username}</h4>
+              <span className="profileInfoDesc">{user.desc}</span>
             </div>
           </div>
           <div className="profileRightBottom">
             <Feed username={username} />
-            <Rightbar profile />
+            <Rightbar user={user} />
           </div>
         </div>
       </div>
