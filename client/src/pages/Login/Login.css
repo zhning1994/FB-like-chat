@@ -88,6 +88,10 @@
   cursor: pointer;
 }
 
+.loginButton:disabled {
+  cursor: not-allowed;
+}
+
 .loginForgot {
   font-family: "Roboto", sans-serif;
   text-align: center;
